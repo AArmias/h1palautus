@@ -29,23 +29,24 @@ Seuraavaksi käytetään apuna kurssimateriaaleja ja tehdään Saltille ajettava
 
 Annetaan init.sls seuraavat tiedot:
 
-_apache2:_
-_pkg.installed_
-_/var/www/html/index.html:_
-_file.managed:_
-  _- source: salt://apache/default-index.html
+apache2:
+ pkg.installed
+/var/www/html/index.html:
+ file.managed:
+   - source: salt://apache/default-index.html
 /etc/apache2/mods-enabled/userdir.conf:
-file.symlink:_
-  _- target: ../mods-available/userdir.conf
+ file.symlink:
+   - target: ../mods-available/userdir.conf
 /etc/apache2/mods-enabled/userdir.load:
-file.symlink:_
-   _- target: ../mods-available/userdir.load
+ file.symlink:
+   - target: ../mods-available/userdir.load
 apache2service:
-service.running:_
-   _- name: apache2_
-   _- watch:_
-     _- file: /etc/apache2/mods-enabled/userdir.conf
-     - file: /etc/apache2/mods-enabled/userdir.load_
+ service.running:
+   - name: apache2
+   - watch:
+     - file: /etc/apache2/mods-enabled/userdir.conf
+     - file: /etc/apache2/mods-enabled/userdir.load
+
 
 
 Saltin eli Teronapurin tulisi korvata ajettaessa apachen alkuperäinen oletussivu, tuolla aiemmin tehdyllä **index.html** tiedostolla.
@@ -74,19 +75,21 @@ Tehtävä listan ainoa tehtävä, missä oli selkeä malli miten toimitaan. Olen
 Kurssimateriaalista löytyy selkeät ohjeet askel askeleelta, jonka ohjeistuksella tälläinen ummikkokin onnistuu SSH-Demonin asentamisessa. 
 
 Aluksi loin **/srv/salt/** kansioon tiedoston **sshd.sls** käskyllä ”**sudoedit /srvsalt/sshd.sls**” jonka sisälle kurssimateriaalin mukaan annoin seuraavat tiedot: 
-_openssh-server:_
- _pkg.installed_
-_/etc/ssh/sshd_config:
- file.managed:_
-   _- source: salt://sshd_config
-sshd:_
- _service.running:_
-   _- watch:_
-    _- file: /etc/ssh/sshd_config_
+
+openssh-server:
+ pkg.installed
+/etc/ssh/sshd_config:
+ file.managed:
+   - source: salt://sshd_config
+sshd:
+ service.running:
+   - watch:
+     - file: /etc/ssh/sshd_config
+
 
 Seuraavaksi loin tiedoston sshd_config käskyllä “**sudoedit /srvsalt/sshd_config**”
 ja määritin seuraavat tiedot tehtävän ja kurssimateriaalin mukaisesti: 
-_Port 7373
+Port 7373
 Protocol 2
 HostKey /etc/ssh/ssh_host_rsa_key
 HostKey /etc/ssh/ssh_host_dsa_key
@@ -114,7 +117,8 @@ PrintLastLog yes
 TCPKeepAlive yes
 AcceptEnv LANG LC_*
 Subsystem sftp /usr/lib/openssh/sftp-server
-UsePAM yes_
+UsePAM yes
+
 
 Seuraavaksi oli ohjeessa tilan lisääminen salt orjalle eli Teronapurille 
 Käskyllä ” **sudo salt '*' state.apply sshd**” alkoi heti tapahtua, ruudulle ilmestyi vino pino tekstiä, mutta tärkeinpänä vastaukset onnistunseesta muutoksesta. 
