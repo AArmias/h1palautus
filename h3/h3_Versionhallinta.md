@@ -26,7 +26,7 @@ Commitin tekeminen onnistuu käskyllä:
 Jonka jälkeen aukeaa editori johon tuon commitin voi kirjoittaa.
 commit jonka annan on "Add Header, text and code"
 
-c) 
+b) 
 git log käsky:
 	tero@tero-VirtualBox:~/palautukset/h3$ git log
 commit 66a82cb4ddbf385c9f77c5339c168b4e1f654167 (HEAD -> main, origin/main, origin/HEAD)
@@ -69,4 +69,41 @@ index 0686240..09e5471 100644
 
 Käskyllä git diff siis saan esille h3_Versionhallinta.md tiedoston josta pystyn katsomaan eroavaisuudet jotka tiedostoon on tehty. Diff käsky vertailee kahta versiota toisiinsa ja kertoo onko niissä eroja. 
 
+git blame käsky:
+	tero@tero-VirtualBox:~/palautukset/h3$ git blame
+usage: git blame [<options>] [<rev-opts>] [<rev>] [--] <file>
 
+    <rev-opts> are documented in git-rev-list(1)
+
+    --incremental         show blame entries as we find them, incrementally
+    -b                    do not show object names of boundary commits (Default: off)
+    --root                do not treat root commits as boundaries (Default: off)
+    --show-stats          show work cost statistics
+    --progress            force progress reporting
+    --score-debug         show output score for blame entries
+    -f, --show-name       show original filename (Default: auto)
+    -n, --show-number     show original linenumber (Default: off)
+    -p, --porcelain       show in a format designed for machine consumption
+    --line-porcelain      show porcelain format with per-line commit information
+    -c                    use the same output mode as git-annotate (Default: off)
+    -t                    show raw timestamp (Default: off)
+    -l                    show long commit SHA1 (Default: off)
+    -s                    suppress author name and timestamp (Default: off)
+    -e, --show-email      show author email instead of name (Default: off)
+    -w                    ignore whitespace differences
+    --ignore-rev <rev>    ignore <rev> when blaming
+    --ignore-revs-file <file>
+                          ignore revisions from <file>
+    --color-lines         color redundant metadata from previous line differently
+    --color-by-age        color lines by age
+    --minimal             spend extra cycles to find better match
+    -S <file>             use revisions from <file> instead of calling git-rev-list
+    --contents <file>     use <file>'s contents as the final image
+    -C[<score>]           find line copies within and across files
+    -M[<score>]           find line movements within and across files
+    -L <range>            process only line range <start>,<end> or function :<funcname>
+    --abbrev[=<n>]        use <n> digits to display object names
+
+git blame käskyt antaa seuraavan listan lisäparametreista käskylle. Käytännössä git blame käskynä kertoo kuka on vastuussa viimeisistä muutoksista tiedostossa. Myös jokaisen rivin hyväksyjä tai commitin tehnyt  voidaan selvittää.
+
+c) 
