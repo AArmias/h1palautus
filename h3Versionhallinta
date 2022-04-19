@@ -1,1 +1,20 @@
+#h3 Versionhallinta - kotitehtävän palautus
+
+Tämä tehtävä on tehty MarkDownina virtuaalikoneelta omalle Github-tililleni. 
+Ainoastaan Github kansio ja h3Versionhallinta tiedosto, on luotu etukäteen githubin puolelle, kaikki muut muutokset tapahtuvat MarkDownina, esimerkiksi tämä tekstin lisäys. 
+
+Jotta pääsiin alkuun piti ensiksi luoda tili Githubiin ja kytkeä virtuaalikone ja github toimimaan yhdessä julkista SSH avainta hyödyntäen. 
+Tämä mahdollistaa jatkossa muutoksien tapahtumisen myös Github varastossani. Tämän lisäksi tuli git versionhallinnan käyttäjänimi ja sähköpostiosoite asettaa kuntoon. 
+
+git config toimii seuraavasti: 
+	git config --global user.name "käyttäjänimi"
+	git congig --global user.email "sähköpostitunnus@sähköposti.fi"
+
+
+Lisäksi Githubiin luotu git kansio pitää kloonata koneelle:
+	git clone git@github.com:AArmias/palautukset.git
+
+
+Näin ollen perusasetukset on kunnossa ja voin jatkossa päivittää git varastoani molempiin suuntiin. 
+
 
