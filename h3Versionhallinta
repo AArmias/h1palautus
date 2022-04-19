@@ -1,4 +1,4 @@
-#h3 Versionhallinta - kotitehtävän palautus
+# h3 Versionhallinta - kotitehtävän palautus
 
 Tämä tehtävä on tehty MarkDownina virtuaalikoneelta omalle Github-tililleni. 
 Ainoastaan Github kansio ja h3Versionhallinta tiedosto, on luotu etukäteen githubin puolelle, kaikki muut muutokset tapahtuvat MarkDownina, esimerkiksi tämä tekstin lisäys. 
@@ -17,4 +17,10 @@ Lisäksi Githubiin luotu git kansio pitää kloonata koneelle:
 
 Näin ollen perusasetukset on kunnossa ja voin jatkossa päivittää git varastoani molempiin suuntiin. 
 
+Tehdessäni muutoksia git kansiooni, pitää muistaa aina järjestys. Ensiksi pitää vetää eli git pull ja kun tiedot ovat virtuaalikoneella ajantasalla, voidaan tehdä tarvittavat muutokset, committaa ne ja sen jälkeen työntää tiedosto takaisin githubin varastoon git push komennolla.
 
+Koska alkuperäinen otsikkoni ei toiminut, korjasin sitä hieman. Tämän lisäksi lisäsin tekstiä ja kuvauksen tulevasta commitista. Tehtävän ohjeena on tehdä yksi selkeä  commit, koskemaan useampaa muutosta.
+Commitin tekeminen onnistuu käskyllä:
+	git add
+	git commit
+Jonka jälkeen aukeaa editori johon tuon commitin voi kirjoittaa.	
