@@ -1,1 +1,27 @@
-h3
+# h3 Versionhallinta - kotitehtävän palautus
+
+Tämä tehtävä on tehty MarkDownina virtuaalikoneelta omalle Github-tililleni. 
+Ainoastaan Github kansio ja h3Versionhallinta tiedosto, on luotu etukäteen githubin puolelle, kaikki muut muutokset tapahtuvat MarkDownina, esimerkiksi tämä tekstin lisäys. 
+
+Jotta pääsiin alkuun piti ensiksi luoda tili Githubiin ja kytkeä virtuaalikone ja github toimimaan yhdessä julkista SSH avainta hyödyntäen. 
+Tämä mahdollistaa jatkossa muutoksien tapahtumisen myös Github varastossani. Tämän lisäksi tuli git versionhallinnan käyttäjänimi ja sähköpostiosoite asettaa kuntoon. 
+
+git config toimii seuraavasti: 
+	git config --global user.name "käyttäjänimi"
+	git congig --global user.email "sähköpostitunnus@sähköposti.fi"
+
+
+Lisäksi Githubiin luotu git kansio pitää kloonata koneelle:
+	git clone git@github.com:AArmias/palautukset.git
+
+
+Näin ollen perusasetukset on kunnossa ja voin jatkossa päivittää git varastoani molempiin suuntiin. 
+
+Tehdessäni muutoksia git kansiooni, pitää muistaa aina järjestys. Ensiksi pitää vetää eli git pull ja kun tiedot ovat virtuaalikoneella ajantasalla, voidaan tehdä tarvittavat muutokset, committaa ne ja sen jälkeen työntää tiedosto takaisin githubin varastoon git push komennolla.
+
+Lisäsin nano editorilla tähän palautukseen otsikon, tekstiä ja tämän kuvauksen tulevasta commitista. Tehtävän ohjeena on tehdä yksi selkeä  commit, koskemaan useampaa muutosta.
+Commitin tekeminen onnistuu käskyllä:
+	git add -A
+	git commit
+Jonka jälkeen aukeaa editori johon tuon commitin voi kirjoittaa.
+commit jonka annan on "Add Header, text and code"
