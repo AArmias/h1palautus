@@ -110,6 +110,9 @@ c) HUPS! Poistin vahingossa kaiken tekstin tästä kyseisestä tiedostosta. En k
 	git reset --hard
 Mikäli siis käy vahinko, kyseisellä käskyllä voit perua tallentamattomat muutokset ja palauttaa viimeksi tallennetun version.
 
-d)
+z) Artikkeli Commonmark contributors: Markdown Reference pitää sisällään perus käskyt tekstin asetteluun Markdownia tehdessä. Esimerkiksi otsikko1 (#), otsikkos2 (##), tekstin boldaus jne.. Tämän lisäksi artikkelissa on nopea noin 10 minuutin tutoriaali Markdownien tekemiseen. 
+
+
+    
  
  
