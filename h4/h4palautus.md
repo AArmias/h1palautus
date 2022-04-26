@@ -2,7 +2,7 @@
 
 **a) Captain obvious. Linuxissa on paketinhallinta, joten ohjelmien asentaminen on yksinkertaista. Tee tila, joka asentaa 10 suosikkiohjelmaasi paketinhallinnasta. Tässä a-kohdassa voit jättää ohjelmat oletusasetuksille**.
 
-Tehtävän suorittemiseksi saltin avulla vaaditaan aiemmissa tehtävän palautuksissa tehty salt apurin ja masterin asentaminen. Mikäli salt apuri ja master on asennettu ja toimivat, voidaan tämä vaihe unohtaa. Lisäksi pitää keksiä 10 ohjelman lista ladattavia ohjelmia. Koska itse en käytä Linuxia tehtävien ulkopuolella juuri lainkaan, oma ohjelmien listani määräytyi melko sattumanvaraisesti. Listalta löytyy muutama Windospuolelta tuttu ohjelma kuten Audacity ja VLC player, muuten koitin pitää valittujen ohjelmien koon mahdollisimman pienenä, jotta asentaminen virtuaalikoneelle onnistuu. Omat asennettavat ohjelmani ovat. 1. Audacity, 2. M.A.R.S, 3. Micro editor, 4. Kspaceduel, 5. Mr. Rescue, 6. VLC, 7. FFmpeg, 8. Krop, 9. Remmina, 10.cpustat
+Tehtävän suorittemiseksi saltin avulla vaaditaan aiemmissa tehtävän palautuksissa tehty salt apurin ja masterin asentaminen. Mikäli salt apuri ja master on asennettu ja toimivat, voidaan tämä vaihe unohtaa. Lisäksi pitää keksiä 10 ohjelman lista ladattavia ohjelmia. Koska itse en käytä Linuxia tehtävien ulkopuolella juuri lainkaan, oma ohjelmien listani määräytyi melko sattumanvaraisesti. Listalta löytyy muutama Windospuolelta tuttu ohjelma kuten Audacity ja VLC player, muuten koitin pitää valittujen ohjelmien koon mahdollisimman pienenä, jotta asentaminen virtuaalikoneelle onnistuu. Omat asennettavat ohjelmani ovat. 1. Audacity, 2. Micro editor, 3. Kspaceduel, 4. M.A.R.S Shooter. 5. Mr. Rescue, 6. VLC, 7. FFmpeg, 8. Krop, 9. Remmina, 10.cpustat
 
 Nyt kun ohjelmat ovat valittu, Salt apurit ja masterit kunnossa on seuraavaksi vuorossa ohjelmien käsin asentaminen ja kokeileminen. 
 Kun tämä vaihe on tehty, voidaan siirtyä seuraavaan vaiheeseen, eli tilan luomiseen. 
@@ -16,7 +16,8 @@ ohjelmien poistaminen
 sudo apt-get remove "ohjelma"
 ```
 
-Nyt kun käsin asennus ja poistaminen on kokeiltu, sekä pakettejen nimet kaivettu (tähän termi) avulla esille. voidaan siirtyä tilan luomiseen. 
+Nyt kun käsin asennus ja poistaminen on kokeiltu, sekä pakettejen nimet kaivettu aikajanan avulla esille. voidaan siirtyä tilan luomiseen. 
+Asennetut paketit tarkistin  /etc hakemistosta komennolla:  `sudo find -printf '%T+ %p\\n'|sort|tail`
 
 Aluksi luodaan tila.sls tiedosto kansioon /srv/salt. 
 
@@ -52,6 +53,18 @@ install remmina:
 install cpustat:
   pkg.installed:
     - name: cpustat
-
-
 ```
+Kun tiedosto on valmis annetaan salt apurin, tässä tapauksessa Teronapurin hoitaa tilan ajaminen käskyllä:
+```
+sudo salt Teronapuri state.apply tila
+```
+Koska asennettavia ohjelmia on 10 kappaletta, asennuksella kestää hetken, jos toisen. Lopulta salt ilmoittaa tapahtuneet muutokset ja perään onnistuneiden ja epännistuneiden käskyjen määrän. Koska olin tarkistanut käsin jokaisen asennuspaketin nimen, tällä kertaa kaikki paketit asentuivat ensimmäisellä yrityksellä. 
+
+> Summery for Teronapuri
+>Succeeded: 10 (changed=10)
+> Failed:          0
+> Total states run:                10
+
+b )
+
+c)
