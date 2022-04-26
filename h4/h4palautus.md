@@ -23,8 +23,35 @@ Aluksi luodaan tila.sls tiedosto kansioon /srv/salt.
 Sen jälkeen annetaan tilalle käskyjä alkaa asentamaan paketteja. Käskyjen antaminen onnistuu kirjoittamalla ne vaikkapa nano tai micro editorilla tila.sls tiedostoon.
 ```
 install audacity:
-  pkg.insalled:
+  pkg.installed:
     - name: audacity
+install micro:
+  pkg.installed:
+    - name: micro
+install kspaceduel:
+  pkg.installed:
+    - name: kspaceduel
+install marsshooter:
+  pkg.installed:
+    - name: marsshooter
+install mrrescue:
+  pkg.installed:
+    - name: mrrescue
+install vlc:
+  pkg.installed:
+    - name: vlc
+install ffmpeg:
+  pkg.installed:
+    - name: ffmpeg
+install krop:
+  pkg.installed:
+    - name: krop
+install remmina:
+  pkg.installed:
+    - name: remmina
+install cpustat:
+  pkg.installed:
+    - name: cpustat
 
 
 ```
