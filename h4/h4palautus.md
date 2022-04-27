@@ -107,7 +107,17 @@ Muutin Micro editorin väriteemaa editorissa käskyllä:
 ctrl + e ja `set colorscheme gotham`
 
 *   Ota uusi aikajana ja etsi muutos sieltä
-> 
+> tero@tero-VirtualBox:~$ sudo find -printf '%T+ %p\n'|sort|tail
+> 2022-04-27+14:01:57.0469816820 ./snap/firefox/common/.cache/mozilla/firefox/i02d7p3o.default
+> 2022-04-27+14:02:08.4590187510 ./snap/firefox/common/.cache/mozilla/firefox/i02d7p3o.default/thumbnails
+> 2022-04-27+14:02:08.9550203600 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/prefs.js
+> 2022-04-27+14:02:08.9710204100 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default
+> 2022-04-27+14:02:34.5511036390 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/archived/2022-04
+> 2022-04-27+14:02:34.5511036390 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/archived/2022-04/1651057354532.9ddc5a73-3840-494b- 9e03-417a5b00c6b5.event.jsonlz4
+> 2022-04-27+14:03:18.0912462220 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/cookies.sqlite-wal
+> 2022-04-27+14:05:06.6956063670 ./.config/micro/settings.json
+> 2022-04-27+14:05:21.9556574500 ./.config/micro/buffers/history
+> 2022-04-27+14:06:02.9517951630 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/glean/db/data.safe.bin
 
 
 
