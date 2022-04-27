@@ -115,13 +115,15 @@ ctrl + e ja `set colorscheme gotham`
 > 2022-04-27+14:02:34.5511036390 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/archived/2022-04
 > 2022-04-27+14:02:34.5511036390 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/archived/2022-04/1651057354532.9ddc5a73-3840-494b- 9e03-417a5b00c6b5.event.jsonlz4
 > 2022-04-27+14:03:18.0912462220 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/cookies.sqlite-wal
-> 2022-04-27+14:05:06.6956063670 ./.config/micro/settings.json
+>**2022-04-27+14:05:06.6956063670 ./.config/micro/settings.json**  <- TÄÄLLÄ
 > 2022-04-27+14:05:21.9556574500 ./.config/micro/buffers/history
 > 2022-04-27+14:06:02.9517951630 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/glean/db/data.safe.bin
 
+**2022-04-27+14:05:06.6956063670 ./.config/micro/settings.json** riviltä löytyy micron asetukset, jonne kyseinen väriteeman muutos tallennettiin. 
 
 
 *   Onko samalla hetkellä muutettu yhtä vai useampaa tiedostoa?
+Kuten find tuloste kertoo, samalla hetkellä muokattiin vain tuota yhtä tiedostoa. 
 
 
 c)
