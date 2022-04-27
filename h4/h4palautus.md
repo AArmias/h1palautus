@@ -128,5 +128,14 @@ Kuten find tuloste kertoo, samalla hetkellä muokattiin vain tuota yhtä tiedost
 
 c)  **Tiedän mitä teit viime kesän^H^H^H komennolla. Säädä jotain ohjelmaa ja etsi sen muuttamat tiedostot aikajanasta. Tee sitten tästä oma Saltin tila**
 
+Pyrkimykseni oli tehdä salitlle tila, joka vaihtaa Micro editorin värin ennalta määrätyksi. 
+Loin asetus tiedoston, jolla salt apuri korvaisi olemassa olevan asetustiedoston sisällön. 
+Settings2.json pitää sisällään koodin:
+```
+{
+   "colorscheme": "zenburn"
+}
+```
+Tämän lisäksi pyrin luomaan salt apurille tilan, jossa apuri hakisi tuon tiedoston tiedot ja korvaisi niillä Micro editorin oman settings.json tiedoston. 
 
-
+Tässä vaiheessa taidot kuitenkin loppuivat kesken. 
