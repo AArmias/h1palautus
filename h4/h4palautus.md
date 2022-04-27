@@ -102,10 +102,15 @@ Esimerkki aikajanasta, jossa näkyvissä käynnissä olevan firefoxin jatkuvasti
 **tail** =  Mikäli tiedostopolku on pitkä, saadaan tail komennolla siitä tulostettua vain viimeiset 10 riviä. Tämä tekee haun tulosteen lukemisesta huomattavasti helpompaa. 
 
 
-
-
 *   Aja jokin komento, joka muuttaa järjestelmän yhteisiä asetustiedostoja
+Muutin Micro editorin väriteemaa editorissa käskyllä:
+ctrl + e ja `set colorscheme gotham`
+
 *   Ota uusi aikajana ja etsi muutos sieltä
+> 
+
+
+
 *   Onko samalla hetkellä muutettu yhtä vai useampaa tiedostoa?
 
 
