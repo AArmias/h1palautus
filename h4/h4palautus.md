@@ -139,3 +139,10 @@ Settings2.json pitää sisällään koodin:
 Tämän lisäksi pyrin luomaan salt apurille tilan, jossa apuri hakisi tuon tiedoston tiedot ja korvaisi niillä Micro editorin oman settings.json tiedoston. 
 
 Tässä vaiheessa taidot kuitenkin loppuivat kesken. 
+
+
+Lähteet:  
+
+Karvinen, Tero 2018: Apache User Homepages Automatically – Salt Package-File-Service Example. [https://terokarvinen.com//2018/apache-user-homepages-automatically-salt-package-file-service-example/](https://terokarvinen.com//2018/apache-user-homepages-automatically-salt-package-file-service-example/) Luettu 12.4.2022
+
+SaltStack 2016: Functions. (https://docs.saltproject.io/en/getstarted/config/functions.html) Luettu 12.4.2022
