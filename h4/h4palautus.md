@@ -66,7 +66,7 @@ Koska asennettavia ohjelmia on 10 kappaletta, asennuksella kestää hetken, jos 
 > Total states run:                10
 
 **b ) CSI Pasila. Tiedostoista saa aikajanan 'cd /etc/; sudo find -printf '%T+ %p\\n'|sort|tail'.**
-*   Anna esimerkki aikajanasta
+*   **Anna esimerkki aikajanasta**
 > tero@tero-VirtualBox:~$ sudo find -printf '%T+ %p\n'|sort|tail
 > 2022-04-27+13:02:34.3687625580 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/session-state.json
 > 2022-04-27+13:02:34.5007616280 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting
@@ -82,10 +82,32 @@ Koska asennettavia ohjelmia on 10 kappaletta, asennuksella kestää hetken, jos 
 Esimerkki aikajanasta, jossa näkyvissä käynnissä olevan firefoxin jatkuvasti käynnissä/käytössä ollessaan tekemiä muutoksia, aika järjestyksessä. 
 
 
-*   Selitä jokainen kohta komennosta, jolla aikajana tehdään. Vinkki: '%T+' löytyy 'man find' kohdasta printf.
+*   **Selitä jokainen kohta komennosta, jolla aikajana tehdään. Vinkki: '%T+' löytyy 'man find' kohdasta printf.**
+
+**sudo** = suoritetaan komento järjestelmänvalvojana / pääkäyttäjänä. Mikäli find haku tehdään /etc kansiossa ilman sudo komentoa mitä todennäköisimmin tulee ilmoitus, että osan alikansion kahdalla lupa haulle on evätty. Osassa kansiossa find haku onnistuu ilman sudo komentoakin. 
+
+ **find** = Todella tehokas haku käsky, kolla on olemassa todella suuri määrä lisä parametreja joilla määrittää mitä tietoa haluaa hakea. 
+ käskyllä `man find` saa luettavaksi täydelliset ohjeet eri parametreista joita on käytettävänä. Tiedostoja voi hakea mm. koon mukaan jolloin voi määritellä esimerkiksi haetaanko kaikki alle 5mb tiedostot vai kaikki yli 5mb tiedostot. Voit hakea kaikki .php tiedostot, mikäli et muista tiedoston tarkkaa nimeä, mutta kuitenkin minkä tyyppisestä tiedostosta on kyse. Haku mahdollisuuksia on siis todella laajasti. 
+
+**-printf **= Määrittää miten haku tulostetaan ruudulle. -printf käskyn lisäksi voidaan antaa -printf käskylle lisäparametreja, joilla muotoilla tapaa jolla haku tulostetaan näytölle. 
+
+**'%T+** =  %t = hakee viimeisimmät muokatut tiedostot, tulkitseminen kuitenkin on hankalempaan.  %T+ parametrilla tuodaan tuohon hakuun lisää selkeyttä, ja määritellään tulostuksen alkamaan vuosi-kuukausi-päivä+kello ja vasta sitten polku ja tiedostonimi. Näin hakua on helpompi tulkita ja lukea. 
+
+**%p** = tiedoston nimi. 
+
+**\n**  = uusi rivi. jaa haun riveille, muuten haku tulisi yhtenä isona pötkönä. 
+
+**sort **= määrittää missä järjestyksessä tiedostot tulostetaan näkyville.
+
+**tail** =  Mikäli tiedostopolku on pitkä, saadaan tail komennolla siitä tulostettua vain viimeiset 10 riviä. Tämä tekee haun tulosteen lukemisesta huomattavasti helpompaa. 
+
+
+
+
 *   Aja jokin komento, joka muuttaa järjestelmän yhteisiä asetustiedostoja
 *   Ota uusi aikajana ja etsi muutos sieltä
 *   Onko samalla hetkellä muutettu yhtä vai useampaa tiedostoa?
 
 
 c)
+
