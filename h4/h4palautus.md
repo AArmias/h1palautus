@@ -78,6 +78,7 @@ Koska asennettavia ohjelmia on 10 kappaletta, asennuksella kestää hetken, jos 
 > 2022-04-27+13:04:08.9505164870 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/prefs.js
 > 2022-04-27+13:04:08.9625166110 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default
 > 2022-04-27+13:04:52.2188735530 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/glean/db/data.safe.bin
+
 Esimerkki aikajanasta, jossa näkyvissä käynnissä olevan firefoxin jatkuvasti käynnissä/käytössä ollessaan tekemiä muutoksia, aika järjestyksessä. 
 
 
