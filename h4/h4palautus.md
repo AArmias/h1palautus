@@ -67,7 +67,19 @@ Koska asennettavia ohjelmia on 10 kappaletta, asennuksella kestää hetken, jos 
 
 **b ) CSI Pasila. Tiedostoista saa aikajanan 'cd /etc/; sudo find -printf '%T+ %p\\n'|sort|tail'.**
 *   Anna esimerkki aikajanasta
-> 
+> tero@tero-VirtualBox:~$ sudo find -printf '%T+ %p\n'|sort|tail
+> 2022-04-27+13:02:34.3687625580 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/session-state.json
+> 2022-04-27+13:02:34.5007616280 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting
+> 2022-04-27+13:02:34.5007616280 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/aborted-session-ping
+> 2022-04-27+13:02:52.9886881180 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/xulstore.json
+> 2022-04-27+13:02:55.9648415930 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/broadcast-listeners.json
+> 2022-04-27+13:03:06.4852954320 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/storage/permanent/chrome/idb
+> 2022-04-27+13:03:58.9744069050 ./snap/firefox/common/.cache/event-sound-cache.tdb.tero-VirtualBox.x86_64-pc-linux-gnu
+> 2022-04-27+13:04:08.9505164870 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/prefs.js
+> 2022-04-27+13:04:08.9625166110 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default
+> 2022-04-27+13:04:52.2188735530 ./snap/firefox/common/.mozilla/firefox/i02d7p3o.default/datareporting/glean/db/data.safe.bin
+Esimerkki aikajanasta, jossa näkyvissä käynnissä olevan firefoxin jatkuvasti käynnissä/käytössä ollessaan tekemiä muutoksia, aika järjestyksessä. 
+
 
 *   Selitä jokainen kohta komennosta, jolla aikajana tehdään. Vinkki: '%T+' löytyy 'man find' kohdasta printf.
 *   Aja jokin komento, joka muuttaa järjestelmän yhteisiä asetustiedostoja
