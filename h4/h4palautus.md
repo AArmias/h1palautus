@@ -65,6 +65,14 @@ Koska asennettavia ohjelmia on 10 kappaletta, asennuksella kestää hetken, jos 
 > Failed:          0
 > Total states run:                10
 
-b )
+**b ) CSI Pasila. Tiedostoista saa aikajanan 'cd /etc/; sudo find -printf '%T+ %p\\n'|sort|tail'.**
+*   Anna esimerkki aikajanasta
+> 
+
+*   Selitä jokainen kohta komennosta, jolla aikajana tehdään. Vinkki: '%T+' löytyy 'man find' kohdasta printf.
+*   Aja jokin komento, joka muuttaa järjestelmän yhteisiä asetustiedostoja
+*   Ota uusi aikajana ja etsi muutos sieltä
+*   Onko samalla hetkellä muutettu yhtä vai useampaa tiedostoa?
+
 
 c)
