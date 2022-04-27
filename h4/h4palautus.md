@@ -93,7 +93,7 @@ Esimerkki aikajanasta, jossa näkyvissä käynnissä olevan firefoxin jatkuvasti
 
 **'%T+** =  %t = hakee viimeisimmät muokatut tiedostot, tulkitseminen kuitenkin on hankalempaan.  %T+ parametrilla tuodaan tuohon hakuun lisää selkeyttä, ja määritellään tulostuksen alkamaan vuosi-kuukausi-päivä+kello ja vasta sitten polku ja tiedostonimi. Näin hakua on helpompi tulkita ja lukea. 
 
-**%p** = tiedoston nimi. 
+**%p** = tiedoston nimi ja polku.
 
 **\n**  = uusi rivi. jaa haun riveille, muuten haku tulisi yhtenä isona pötkönä. 
 
@@ -126,5 +126,7 @@ ctrl + e ja `set colorscheme gotham`
 Kuten find tuloste kertoo, samalla hetkellä muokattiin vain tuota yhtä tiedostoa. 
 
 
-c)
+c)  **Tiedän mitä teit viime kesän^H^H^H komennolla. Säädä jotain ohjelmaa ja etsi sen muuttamat tiedostot aikajanasta. Tee sitten tästä oma Saltin tila**
+
+
 
