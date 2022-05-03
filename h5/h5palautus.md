@@ -142,6 +142,9 @@ Kokeillaan ajaa tila: sudo salt Teronapuri state.apply kokoelma/kokoelma ja saad
 
 -----------
 
+Lähteet:
+
+Karvinen, Tero 2022: Configuration management systems 2022. https://terokarvinen.com/2021/configuration-management-systems-2022-spring/
 
 
 
