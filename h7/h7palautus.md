@@ -20,4 +20,5 @@ Alla vielä listattuna jokainen erikseen:
 
 Oman moduulin raportti löytyy täältä. https://github.com/AArmias/MCS
 Raportti kertoo siitä miten asensin Minecraft serverin ubuntulle. 
+Raportti on kirjoitettu rallienglannilla, joten toivottavasti ymmärrät sitä lukiessasi mitä yritän sanoa. 
 
